@@ -47,49 +47,12 @@
         </div>
     </div>
 
-    
+    <div id="blur-panel"></div>
 
     <canvas id="glcanvas" width="100vw" height="100vh" tabindex="1"></canvas>
 
     <script type="text/javascript" src="./assets/js/patch.js" async></script>
     
-
-    <script type="text/javascript">
-
-        function showError(errId, errMsg)
-        {
-            // handle critical errors here if needed
-        }
-
-        function patchInitialized(patch)
-        {
-            // You can now access the patch object (patch), register variable watchers and so on
-        }
-
-        function patchFinishedLoading(patch)
-        {
-            // The patch is ready now, all assets have been loaded
-        }
-
-        document.addEventListener("CABLES.jsLoaded", function (event)
-        {
-            CABLES.patch = new CABLES.Patch({
-                patch: CABLES.exportedPatch,
-                "prefixAssetPath": "",
-                "assetPath": "assets/",
-                "jsPath": "js/",
-                "glCanvasId": "glcanvas",
-                "glCanvasResizeToWindow": true,
-                "onError": showError,
-                "onPatchLoaded": patchInitialized,
-                "onFinishedLoading": patchFinishedLoading,
-                "canvas": {"alpha":true, "premultipliedAlpha":true } // make canvas transparent
-            });
-        });
-
-        // disable rubberband effect on mobile devices
-        document.getElementById('glcanvas').addEventListener('touchmove', (e)=>{ e.preventDefault(); }, false);
-    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"

@@ -10,7 +10,7 @@ body{
 
 .titles-wrapper{
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 .custom-row{
     background: none;
@@ -19,7 +19,7 @@ body{
     position: relative;
 }
 .custom-row:last-child{
-    border-bottom: none;
+    border-bottom: none !important;
 }
 .custom-row h1{
     padding-left: 20px;
@@ -44,6 +44,22 @@ body{
     height: 0%;
     transition: height 3s  ease-out;
 }
+#image{
+    position: absolute;
+    z-index: 3;
+    bottom: 5%;
+    right: 3%;
+}
+
+#blur-panel{
+    width: 100vw;
+    height: 19vw;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    backdrop-filter: blur(3px);
+}
 
 canvas {
     position: absolute;
@@ -61,4 +77,3 @@ canvas {
     -ms-user-select: none;
     user-select: none;
 }
-
